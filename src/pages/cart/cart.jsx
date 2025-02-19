@@ -9,13 +9,18 @@ export const Cart = () => {
 
     return (
         <>
-            <div className="py-38px bg-[#f9f1e7]">
+            <div className="py-[38px] bg-[#f9f1e7]">
                 <div className="container">
-                    <h1>
-                        <NavLink to={"/"}>Home</NavLink> &gt;{" "}
-                        <NavLink to={"/shop"}>Shop</NavLink> &gt; |{" "}
-                        {oneData[0]?.title || id}
-                    </h1>
+                    <div className="flex gap-[24px] items-center text-center">
+                        <p>
+                            <NavLink to={"/"}>Home</NavLink> &gt;
+                        </p>
+                        <p>
+                            <NavLink to={"/shop"}>Shop</NavLink> &gt;
+                        </p>
+                        <div className="w-[2px] h-[37px] bg-[#9f9f9f]"></div>
+                        <p>{oneData[0]?.title || id}</p>
+                    </div>
                 </div>
             </div>
             <div>
